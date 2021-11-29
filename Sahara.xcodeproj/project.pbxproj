@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1F3BDF4B2725B95D0076AC6F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3BDF4A2725B95D0076AC6F /* HomeViewController.swift */; };
 		1F4388D7272B97AA002E2D5C /* StoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4388D6272B97AA002E2D5C /* StoreCollectionViewCell.swift */; };
+		1F5477ED274DE6B9005F9D58 /* profileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5477EC274DE6B9005F9D58 /* profileCollectionViewCell.swift */; };
+		1F5477EF274DE7BE005F9D58 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5477EE274DE7BE005F9D58 /* ShopViewController.swift */; };
 		1F62B4082719F87E009A26F1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F62B4072719F87E009A26F1 /* SignUpViewController.swift */; };
 		1F96612B2717D5CD00D6366D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96612A2717D5CD00D6366D /* AppDelegate.swift */; };
 		1F96612D2717D5CD00D6366D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96612C2717D5CD00D6366D /* SceneDelegate.swift */; };
@@ -19,8 +21,12 @@
 		1F9661422717D5CF00D6366D /* SaharaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9661412717D5CF00D6366D /* SaharaTests.swift */; };
 		1F96614C2717D5CF00D6366D /* SaharaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96614B2717D5CF00D6366D /* SaharaUITests.swift */; };
 		1F96614E2717D5CF00D6366D /* SaharaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96614D2717D5CF00D6366D /* SaharaUITestsLaunchTests.swift */; };
-		1FA5FA442728F49000E7A0D2 /* productCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5FA432728F49000E7A0D2 /* productCollectionViewCell.swift */; };
+		1FAC4E8B2751BD120076031F /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC4E8A2751BD120076031F /* SocialViewController.swift */; };
+		1FAC4E8E2751C4F50076031F /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC4E8C2751C4F50076031F /* PostTableViewCell.swift */; };
+		1FAC4E8F2751C4F50076031F /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAC4E8D2751C4F50076031F /* PostTableViewCell.xib */; };
+		1FADAE022747617F0086D3D2 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FADAE012747617F0086D3D2 /* ProductCollectionViewCell.swift */; };
 		1FBE5B6A27339242006D7E2B /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBE5B6927339242006D7E2B /* searchViewController.swift */; };
+		1FCCAC4E2744BBBA004BF138 /* resultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCAC4D2744BBBA004BF138 /* resultsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,8 @@
 /* Begin PBXFileReference section */
 		1F3BDF4A2725B95D0076AC6F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F4388D6272B97AA002E2D5C /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
+		1F5477EC274DE6B9005F9D58 /* profileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileCollectionViewCell.swift; sourceTree = "<group>"; };
+		1F5477EE274DE7BE005F9D58 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		1F62B4072719F87E009A26F1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1F9661272717D5CD00D6366D /* Sahara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sahara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F96612A2717D5CD00D6366D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,8 +65,12 @@
 		1F9661472717D5CF00D6366D /* SaharaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaharaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F96614B2717D5CF00D6366D /* SaharaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaharaUITests.swift; sourceTree = "<group>"; };
 		1F96614D2717D5CF00D6366D /* SaharaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaharaUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1FA5FA432728F49000E7A0D2 /* productCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productCollectionViewCell.swift; sourceTree = "<group>"; };
+		1FAC4E8A2751BD120076031F /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		1FAC4E8C2751C4F50076031F /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		1FAC4E8D2751C4F50076031F /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		1FADAE012747617F0086D3D2 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		1FBE5B6927339242006D7E2B /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
+		1FCCAC4D2744BBBA004BF138 /* resultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +98,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F8CFB7D27547630007D9AA2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1F8CFB7E27547637007D9AA2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F8CFB7F27547647007D9AA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1F96611E2717D5CD00D6366D = {
 			isa = PBXGroup;
 			children = (
@@ -109,18 +142,27 @@
 		1F9661292717D5CD00D6366D /* Sahara */ = {
 			isa = PBXGroup;
 			children = (
+				1F8CFB7F27547647007D9AA2 /* Model */,
+				1F8CFB7E27547637007D9AA2 /* View */,
+				1F8CFB7D27547630007D9AA2 /* ViewModel */,
 				1F96612A2717D5CD00D6366D /* AppDelegate.swift */,
 				1F96612C2717D5CD00D6366D /* SceneDelegate.swift */,
 				1F96612E2717D5CD00D6366D /* LogInViewController.swift */,
 				1F9661302717D5CD00D6366D /* Main.storyboard */,
 				1F4388D6272B97AA002E2D5C /* StoreCollectionViewCell.swift */,
-				1FA5FA432728F49000E7A0D2 /* productCollectionViewCell.swift */,
 				1F9661332717D5CF00D6366D /* Assets.xcassets */,
 				1F9661352717D5CF00D6366D /* LaunchScreen.storyboard */,
 				1F9661382717D5CF00D6366D /* Info.plist */,
 				1F62B4072719F87E009A26F1 /* SignUpViewController.swift */,
 				1F3BDF4A2725B95D0076AC6F /* HomeViewController.swift */,
 				1FBE5B6927339242006D7E2B /* searchViewController.swift */,
+				1FCCAC4D2744BBBA004BF138 /* resultsTableViewCell.swift */,
+				1FADAE012747617F0086D3D2 /* ProductCollectionViewCell.swift */,
+				1F5477EC274DE6B9005F9D58 /* profileCollectionViewCell.swift */,
+				1F5477EE274DE7BE005F9D58 /* ShopViewController.swift */,
+				1FAC4E8C2751C4F50076031F /* PostTableViewCell.swift */,
+				1FAC4E8A2751BD120076031F /* SocialViewController.swift */,
+				1FAC4E8D2751C4F50076031F /* PostTableViewCell.xib */,
 			);
 			path = Sahara;
 			sourceTree = "<group>";
@@ -158,6 +200,8 @@
 			dependencies = (
 			);
 			name = Sahara;
+			packageProductDependencies = (
+			);
 			productName = Sahara;
 			productReference = 1F9661272717D5CD00D6366D /* Sahara.app */;
 			productType = "com.apple.product-type.application";
@@ -230,6 +274,8 @@
 				Base,
 			);
 			mainGroup = 1F96611E2717D5CD00D6366D;
+			packageReferences = (
+			);
 			productRefGroup = 1F9661282717D5CD00D6366D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -249,6 +295,7 @@
 				1F9661372717D5CF00D6366D /* LaunchScreen.storyboard in Resources */,
 				1F9661342717D5CF00D6366D /* Assets.xcassets in Resources */,
 				1F9661322717D5CD00D6366D /* Main.storyboard in Resources */,
+				1FAC4E8F2751C4F50076031F /* PostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +322,16 @@
 			files = (
 				1F4388D7272B97AA002E2D5C /* StoreCollectionViewCell.swift in Sources */,
 				1F3BDF4B2725B95D0076AC6F /* HomeViewController.swift in Sources */,
+				1FAC4E8E2751C4F50076031F /* PostTableViewCell.swift in Sources */,
+				1F5477EF274DE7BE005F9D58 /* ShopViewController.swift in Sources */,
+				1FAC4E8B2751BD120076031F /* SocialViewController.swift in Sources */,
+				1F5477ED274DE6B9005F9D58 /* profileCollectionViewCell.swift in Sources */,
+				1FCCAC4E2744BBBA004BF138 /* resultsTableViewCell.swift in Sources */,
 				1FBE5B6A27339242006D7E2B /* searchViewController.swift in Sources */,
 				1F96612F2717D5CD00D6366D /* LogInViewController.swift in Sources */,
 				1F96612B2717D5CD00D6366D /* AppDelegate.swift in Sources */,
 				1F62B4082719F87E009A26F1 /* SignUpViewController.swift in Sources */,
-				1FA5FA442728F49000E7A0D2 /* productCollectionViewCell.swift in Sources */,
+				1FADAE022747617F0086D3D2 /* ProductCollectionViewCell.swift in Sources */,
 				1F96612D2717D5CD00D6366D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

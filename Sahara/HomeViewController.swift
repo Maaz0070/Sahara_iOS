@@ -13,6 +13,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var storesCollectionView: UICollectionView!
     
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(collectionView == storesCollectionView) {
@@ -31,12 +32,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             return cell2
         }
         else{
-            let cell = productCollectionView.dequeueReusableCell(withReuseIdentifier: "productsCell", for: indexPath) as! productCollectionViewCell
+            let cell = productCollectionView.dequeueReusableCell(withReuseIdentifier: "productsCell", for: indexPath) as! ProductCollectionViewCell
             cell.pillImage.image = UIImage(named: productsImages[indexPath.row])
             
             return cell
         }
     }
+    
     
     
     var productsImages:[String] = ["pcPic", "picturePC"]
@@ -47,10 +49,17 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
+        
         
         
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //self.tabBarController?.tabBar.isHidden = false
     }
     
     
@@ -65,5 +74,5 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // Pass the selected object to the new view controller.
     }
     */
-
+   
 }
