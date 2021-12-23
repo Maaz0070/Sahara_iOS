@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F19344D275B08E600B66680 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19344C275B08E600B66680 /* Models.swift */; };
 		1F3BDF4B2725B95D0076AC6F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3BDF4A2725B95D0076AC6F /* HomeViewController.swift */; };
 		1F4388D7272B97AA002E2D5C /* StoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4388D6272B97AA002E2D5C /* StoreCollectionViewCell.swift */; };
 		1F5477ED274DE6B9005F9D58 /* profileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5477EC274DE6B9005F9D58 /* profileCollectionViewCell.swift */; };
@@ -21,12 +22,20 @@
 		1F9661422717D5CF00D6366D /* SaharaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9661412717D5CF00D6366D /* SaharaTests.swift */; };
 		1F96614C2717D5CF00D6366D /* SaharaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96614B2717D5CF00D6366D /* SaharaUITests.swift */; };
 		1F96614E2717D5CF00D6366D /* SaharaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96614D2717D5CF00D6366D /* SaharaUITestsLaunchTests.swift */; };
+		1FAB2CE72759C66B00AE5F91 /* SocialFeedPostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB2CE62759C66B00AE5F91 /* SocialFeedPostHeaderTableViewCell.swift */; };
+		1FAB2CE92759C68C00AE5F91 /* SocialFeedPostActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB2CE82759C68C00AE5F91 /* SocialFeedPostActionTableViewCell.swift */; };
+		1FAB2CEB2759C6C900AE5F91 /* SocialFeedPostGeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB2CEA2759C6C900AE5F91 /* SocialFeedPostGeneralTableViewCell.swift */; };
+		1FAB2CED2759D1BA00AE5F91 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB2CEC2759D1BA00AE5F91 /* PostViewController.swift */; };
 		1FAC4E8B2751BD120076031F /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC4E8A2751BD120076031F /* SocialViewController.swift */; };
 		1FAC4E8E2751C4F50076031F /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC4E8C2751C4F50076031F /* PostTableViewCell.swift */; };
 		1FAC4E8F2751C4F50076031F /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAC4E8D2751C4F50076031F /* PostTableViewCell.xib */; };
 		1FADAE022747617F0086D3D2 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FADAE012747617F0086D3D2 /* ProductCollectionViewCell.swift */; };
 		1FBE5B6A27339242006D7E2B /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBE5B6927339242006D7E2B /* searchViewController.swift */; };
 		1FCCAC4E2744BBBA004BF138 /* resultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCAC4D2744BBBA004BF138 /* resultsTableViewCell.swift */; };
+		1FD1F026275880B80079B767 /* SocialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1F025275880B80079B767 /* SocialTableViewCell.swift */; };
+		6C55495357CE76F9ED111DAC /* Pods_Sahara.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E5F31302EE78D843C25FE3 /* Pods_Sahara.framework */; };
+		7394E84FF5E74F878BB1C2D6 /* Pods_SaharaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B841C59FDE0068A3FAEED /* Pods_SaharaTests.framework */; };
+		DC3AD17CD9077C8930EB1A9E /* Pods_Sahara_SaharaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADEA46D45E68A8C8A2EC38A /* Pods_Sahara_SaharaUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FB6DE7EA9F3B225607B2CB9 /* Pods-Sahara.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sahara.release.xcconfig"; path = "Target Support Files/Pods-Sahara/Pods-Sahara.release.xcconfig"; sourceTree = "<group>"; };
+		16B6FAA3E08FD303E665E87D /* Pods-SaharaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaharaTests.debug.xcconfig"; path = "Target Support Files/Pods-SaharaTests/Pods-SaharaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1F19344C275B08E600B66680 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		1F3BDF4A2725B95D0076AC6F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F4388D6272B97AA002E2D5C /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
 		1F5477EC274DE6B9005F9D58 /* profileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -65,12 +77,24 @@
 		1F9661472717D5CF00D6366D /* SaharaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaharaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F96614B2717D5CF00D6366D /* SaharaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaharaUITests.swift; sourceTree = "<group>"; };
 		1F96614D2717D5CF00D6366D /* SaharaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaharaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1FAB2CE62759C66B00AE5F91 /* SocialFeedPostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialFeedPostHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		1FAB2CE82759C68C00AE5F91 /* SocialFeedPostActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialFeedPostActionTableViewCell.swift; sourceTree = "<group>"; };
+		1FAB2CEA2759C6C900AE5F91 /* SocialFeedPostGeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialFeedPostGeneralTableViewCell.swift; sourceTree = "<group>"; };
+		1FAB2CEC2759D1BA00AE5F91 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		1FAC4E8A2751BD120076031F /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		1FAC4E8C2751C4F50076031F /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		1FAC4E8D2751C4F50076031F /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		1FADAE012747617F0086D3D2 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		1FBE5B6927339242006D7E2B /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 		1FCCAC4D2744BBBA004BF138 /* resultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultsTableViewCell.swift; sourceTree = "<group>"; };
+		1FD1F025275880B80079B767 /* SocialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialTableViewCell.swift; sourceTree = "<group>"; };
+		3ADEA46D45E68A8C8A2EC38A /* Pods_Sahara_SaharaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sahara_SaharaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B7B841C59FDE0068A3FAEED /* Pods_SaharaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SaharaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		653E85AF9791FFF407A4A445 /* Pods-Sahara-SaharaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sahara-SaharaUITests.release.xcconfig"; path = "Target Support Files/Pods-Sahara-SaharaUITests/Pods-Sahara-SaharaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A7804FE8427555F6D6CAEF57 /* Pods-Sahara.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sahara.debug.xcconfig"; path = "Target Support Files/Pods-Sahara/Pods-Sahara.debug.xcconfig"; sourceTree = "<group>"; };
+		B2E5F31302EE78D843C25FE3 /* Pods_Sahara.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sahara.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE7F690C1F711E1BB8C692CF /* Pods-SaharaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaharaTests.release.xcconfig"; path = "Target Support Files/Pods-SaharaTests/Pods-SaharaTests.release.xcconfig"; sourceTree = "<group>"; };
+		F04733ED3E33DD7EB5682BDB /* Pods-Sahara-SaharaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sahara-SaharaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Sahara-SaharaUITests/Pods-Sahara-SaharaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C55495357CE76F9ED111DAC /* Pods_Sahara.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7394E84FF5E74F878BB1C2D6 /* Pods_SaharaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,33 +118,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC3AD17CD9077C8930EB1A9E /* Pods_Sahara_SaharaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F8CFB7D27547630007D9AA2 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		1F8CFB7E27547637007D9AA2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		1F8CFB7F27547647007D9AA2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		1F96611E2717D5CD00D6366D = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +132,8 @@
 				1F9661402717D5CF00D6366D /* SaharaTests */,
 				1F96614A2717D5CF00D6366D /* SaharaUITests */,
 				1F9661282717D5CD00D6366D /* Products */,
+				FA6A593F6C4EF176FEA4344F /* Pods */,
+				6666CA679D5A03AC25D80890 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,9 +150,7 @@
 		1F9661292717D5CD00D6366D /* Sahara */ = {
 			isa = PBXGroup;
 			children = (
-				1F8CFB7F27547647007D9AA2 /* Model */,
-				1F8CFB7E27547637007D9AA2 /* View */,
-				1F8CFB7D27547630007D9AA2 /* ViewModel */,
+				1FD1F024275880440079B767 /* Views */,
 				1F96612A2717D5CD00D6366D /* AppDelegate.swift */,
 				1F96612C2717D5CD00D6366D /* SceneDelegate.swift */,
 				1F96612E2717D5CD00D6366D /* LogInViewController.swift */,
@@ -163,6 +169,8 @@
 				1FAC4E8C2751C4F50076031F /* PostTableViewCell.swift */,
 				1FAC4E8A2751BD120076031F /* SocialViewController.swift */,
 				1FAC4E8D2751C4F50076031F /* PostTableViewCell.xib */,
+				1FAB2CEC2759D1BA00AE5F91 /* PostViewController.swift */,
+				1F19344C275B08E600B66680 /* Models.swift */,
 			);
 			path = Sahara;
 			sourceTree = "<group>";
@@ -184,6 +192,56 @@
 			path = SaharaUITests;
 			sourceTree = "<group>";
 		};
+		1FAB2CE42759C5BD00AE5F91 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1FAB2CE52759C5CE00AE5F91 /* Feed */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1FAB2CE52759C5CE00AE5F91 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				1FD1F025275880B80079B767 /* SocialTableViewCell.swift */,
+				1FAB2CE62759C66B00AE5F91 /* SocialFeedPostHeaderTableViewCell.swift */,
+				1FAB2CE82759C68C00AE5F91 /* SocialFeedPostActionTableViewCell.swift */,
+				1FAB2CEA2759C6C900AE5F91 /* SocialFeedPostGeneralTableViewCell.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		1FD1F024275880440079B767 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1FAB2CE42759C5BD00AE5F91 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6666CA679D5A03AC25D80890 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2E5F31302EE78D843C25FE3 /* Pods_Sahara.framework */,
+				3ADEA46D45E68A8C8A2EC38A /* Pods_Sahara_SaharaUITests.framework */,
+				3B7B841C59FDE0068A3FAEED /* Pods_SaharaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA6A593F6C4EF176FEA4344F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7804FE8427555F6D6CAEF57 /* Pods-Sahara.debug.xcconfig */,
+				0FB6DE7EA9F3B225607B2CB9 /* Pods-Sahara.release.xcconfig */,
+				F04733ED3E33DD7EB5682BDB /* Pods-Sahara-SaharaUITests.debug.xcconfig */,
+				653E85AF9791FFF407A4A445 /* Pods-Sahara-SaharaUITests.release.xcconfig */,
+				16B6FAA3E08FD303E665E87D /* Pods-SaharaTests.debug.xcconfig */,
+				BE7F690C1F711E1BB8C692CF /* Pods-SaharaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,17 +249,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F9661512717D5CF00D6366D /* Build configuration list for PBXNativeTarget "Sahara" */;
 			buildPhases = (
+				4B2E5137D1E8271427BA63C1 /* [CP] Check Pods Manifest.lock */,
 				1F9661232717D5CD00D6366D /* Sources */,
 				1F9661242717D5CD00D6366D /* Frameworks */,
 				1F9661252717D5CD00D6366D /* Resources */,
+				0216F42CAAB671FB6741E3B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Sahara;
-			packageProductDependencies = (
-			);
 			productName = Sahara;
 			productReference = 1F9661272717D5CD00D6366D /* Sahara.app */;
 			productType = "com.apple.product-type.application";
@@ -210,6 +268,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F9661542717D5CF00D6366D /* Build configuration list for PBXNativeTarget "SaharaTests" */;
 			buildPhases = (
+				0C742237594496A0B8B3F598 /* [CP] Check Pods Manifest.lock */,
 				1F9661392717D5CF00D6366D /* Sources */,
 				1F96613A2717D5CF00D6366D /* Frameworks */,
 				1F96613B2717D5CF00D6366D /* Resources */,
@@ -228,9 +287,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F9661572717D5CF00D6366D /* Build configuration list for PBXNativeTarget "SaharaUITests" */;
 			buildPhases = (
+				CB24388C6C330ED587AD7CF2 /* [CP] Check Pods Manifest.lock */,
 				1F9661432717D5CF00D6366D /* Sources */,
 				1F9661442717D5CF00D6366D /* Frameworks */,
 				1F9661452717D5CF00D6366D /* Resources */,
+				9E5CE49D410540A3EC47A424 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -274,8 +335,6 @@
 				Base,
 			);
 			mainGroup = 1F96611E2717D5CD00D6366D;
-			packageReferences = (
-			);
 			productRefGroup = 1F9661282717D5CD00D6366D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -315,22 +374,131 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0216F42CAAB671FB6741E3B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sahara/Pods-Sahara-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sahara/Pods-Sahara-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sahara/Pods-Sahara-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C742237594496A0B8B3F598 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SaharaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B2E5137D1E8271427BA63C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sahara-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E5CE49D410540A3EC47A424 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sahara-SaharaUITests/Pods-Sahara-SaharaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sahara-SaharaUITests/Pods-Sahara-SaharaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sahara-SaharaUITests/Pods-Sahara-SaharaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB24388C6C330ED587AD7CF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sahara-SaharaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1F9661232717D5CD00D6366D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FAB2CED2759D1BA00AE5F91 /* PostViewController.swift in Sources */,
 				1F4388D7272B97AA002E2D5C /* StoreCollectionViewCell.swift in Sources */,
 				1F3BDF4B2725B95D0076AC6F /* HomeViewController.swift in Sources */,
 				1FAC4E8E2751C4F50076031F /* PostTableViewCell.swift in Sources */,
 				1F5477EF274DE7BE005F9D58 /* ShopViewController.swift in Sources */,
+				1FD1F026275880B80079B767 /* SocialTableViewCell.swift in Sources */,
+				1FAB2CEB2759C6C900AE5F91 /* SocialFeedPostGeneralTableViewCell.swift in Sources */,
 				1FAC4E8B2751BD120076031F /* SocialViewController.swift in Sources */,
 				1F5477ED274DE6B9005F9D58 /* profileCollectionViewCell.swift in Sources */,
 				1FCCAC4E2744BBBA004BF138 /* resultsTableViewCell.swift in Sources */,
+				1FAB2CE92759C68C00AE5F91 /* SocialFeedPostActionTableViewCell.swift in Sources */,
 				1FBE5B6A27339242006D7E2B /* searchViewController.swift in Sources */,
 				1F96612F2717D5CD00D6366D /* LogInViewController.swift in Sources */,
 				1F96612B2717D5CD00D6366D /* AppDelegate.swift in Sources */,
 				1F62B4082719F87E009A26F1 /* SignUpViewController.swift in Sources */,
+				1F19344D275B08E600B66680 /* Models.swift in Sources */,
+				1FAB2CE72759C66B00AE5F91 /* SocialFeedPostHeaderTableViewCell.swift in Sources */,
 				1FADAE022747617F0086D3D2 /* ProductCollectionViewCell.swift in Sources */,
 				1F96612D2717D5CD00D6366D /* SceneDelegate.swift in Sources */,
 			);
@@ -506,6 +674,7 @@
 		};
 		1F9661522717D5CF00D6366D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7804FE8427555F6D6CAEF57 /* Pods-Sahara.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -534,6 +703,7 @@
 		};
 		1F9661532717D5CF00D6366D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FB6DE7EA9F3B225607B2CB9 /* Pods-Sahara.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -562,6 +732,7 @@
 		};
 		1F9661552717D5CF00D6366D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16B6FAA3E08FD303E665E87D /* Pods-SaharaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -586,6 +757,7 @@
 		};
 		1F9661562717D5CF00D6366D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE7F690C1F711E1BB8C692CF /* Pods-SaharaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -610,6 +782,7 @@
 		};
 		1F9661582717D5CF00D6366D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F04733ED3E33DD7EB5682BDB /* Pods-Sahara-SaharaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -632,6 +805,7 @@
 		};
 		1F9661592717D5CF00D6366D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 653E85AF9791FFF407A4A445 /* Pods-Sahara-SaharaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

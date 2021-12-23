@@ -4,6 +4,7 @@
 //
 //  Created by Maaz Adil on 11/26/21.
 //
+/*
 
 import UIKit
 
@@ -41,3 +42,4 @@ class PostTableViewCell: UITableViewCell {
     }
     
 }
+*/

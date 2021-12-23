@@ -1,0 +1,6 @@
+framework module ASCollectionView_SwiftUI {
+  umbrella header "ASCollectionView-SwiftUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

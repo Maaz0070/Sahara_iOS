@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Sahara/Pods-Sahara-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ASCollectionView-SwiftUI/ASCollectionView_SwiftUI.framework
+${BUILT_PRODUCTS_DIR}/DifferenceKit/DifferenceKit.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
