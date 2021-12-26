@@ -171,7 +171,7 @@
         <!--Shop-->
         <scene sceneID="XGP-VN-Oys">
             <objects>
-                <viewController id="5nz-GG-fYV" customClass="ShopViewController" customModule="Sahara" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShopViewController" id="5nz-GG-fYV" customClass="ShopViewController" customModule="Sahara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TbZ-bP-eTl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -326,12 +326,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="www.compE.com/services/"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvy-ga-awU">
-                                <rect key="frame" x="270" y="68" width="88" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="square.and.arrow.up" catalog="system" title="Button"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wwW-af-tkk"/>
@@ -613,28 +607,115 @@
         <!--Pay-->
         <scene sceneID="yIm-kq-O5X">
             <objects>
-                <viewController id="8cN-Ig-I8u" sceneMemberID="viewController">
+                <viewController id="8cN-Ig-I8u" customClass="PaymentViewController" customModule="Sahara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1te-Ym-iXr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cr2-bq-HcT">
-                                <rect key="frame" x="77" y="122" width="28" height="21"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fXC-NL-w4h">
+                                <rect key="frame" x="68" y="120" width="279" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Pay"/>
+                                    <segment title="Receive"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didTapSegmentedControl:" destination="8cN-Ig-I8u" eventType="valueChanged" id="fCN-Tn-gke"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sahara_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ozM-7J-Gfd">
+                                <rect key="frame" x="126" y="44" width="163" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fr3-wk-vlJ">
+                                <rect key="frame" x="26" y="50" width="56" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pay to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsu-kK-pgE">
+                                <rect key="frame" x="68" y="181" width="52" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Username..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jtw-2q-xzg">
+                                <rect key="frame" x="128" y="174" width="219" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payment Method:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJH-1m-ADW">
+                                <rect key="frame" x="68" y="233" width="134" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Em6-dB-uZf">
+                                <rect key="frame" x="68" y="313" width="28" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Webp.net-resizeimage (15)"/>
+                                <connections>
+                                    <action selector="didPressCashButton:" destination="75Y-cp-EqT" eventType="touchUpInside" id="gfX-LS-Fxi"/>
+                                    <action selector="didPressCashButton:" destination="8cN-Ig-I8u" eventType="touchUpInside" id="tsd-m3-tgW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="od2-nd-Ywd">
+                                <rect key="frame" x="16" y="472" width="133" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="bitcoinLogo"/>
+                                <connections>
+                                    <action selector="didPressBitcoinButton:" destination="8cN-Ig-I8u" eventType="touchUpInside" id="NpU-Fr-fqJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma8-EY-iVY">
+                                <rect key="frame" x="245" y="457" width="149" height="139"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Webp.net-resizeimage (14)"/>
+                                <connections>
+                                    <action selector="didPressDogecoinButton:" destination="8cN-Ig-I8u" eventType="touchUpInside" id="Rjm-Ce-JBR"/>
+                                    <action selector="didPressDogecoinButton:" destination="75Y-cp-EqT" eventType="touchUpInside" id="xKD-Pk-3BQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3x8-oA-Sln">
+                                <rect key="frame" x="20" y="626" width="149" height="139"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Webp.net-resizeimage (16)" title=""/>
+                                <connections>
+                                    <action selector="didPressCardButton:" destination="8cN-Ig-I8u" eventType="touchUpInside" id="yGT-bE-fF6"/>
+                                    <action selector="didPressCardButton:" destination="75Y-cp-EqT" eventType="touchUpInside" id="zVR-Ny-HyD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdX-Bg-kY1">
+                                <rect key="frame" x="263" y="277" width="113" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Webp.net-resizeimage (12)" title=""/>
+                                <connections>
+                                    <action selector="didPressPayPalButton:" destination="8cN-Ig-I8u" eventType="touchUpInside" id="Yfz-Na-TEJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wFh-vC-w2n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pay" image="Webp.net-resizeimage (2)" selectedImage="Webp.net-resizeimage (2)" id="NmQ-a6-JIe"/>
                     <navigationItem key="navigationItem" id="rtc-Jb-ChV"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="fXC-NL-w4h" id="9CQ-xf-7RR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfL-a6-nD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="75Y-cp-EqT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4461" y="1706"/>
+            <point key="canvasLocation" x="4457.971014492754" y="1705.5803571428571"/>
         </scene>
         <!--Search-->
         <scene sceneID="6v3-a1-3wq">
@@ -826,11 +907,16 @@
         <image name="Webp.net-resizeimage (1)" width="30" height="30"/>
         <image name="Webp.net-resizeimage (10)" width="50" height="50"/>
         <image name="Webp.net-resizeimage (11)" width="50" height="50"/>
+        <image name="Webp.net-resizeimage (12)" width="125" height="148"/>
+        <image name="Webp.net-resizeimage (14)" width="125" height="125"/>
+        <image name="Webp.net-resizeimage (15)" width="125" height="125"/>
+        <image name="Webp.net-resizeimage (16)" width="125" height="125"/>
         <image name="Webp.net-resizeimage (2)" width="30" height="31"/>
         <image name="Webp.net-resizeimage (5)" width="60" height="60"/>
         <image name="Webp.net-resizeimage (7)" width="50" height="50"/>
         <image name="Webp.net-resizeimage (8)" width="50" height="50"/>
         <image name="Webp.net-resizeimage-1" width="30" height="30"/>
+        <image name="bitcoinLogo" width="237" height="133"/>
         <image name="clothicon" width="50" height="50"/>
         <image name="homeIcon" width="32" height="37"/>
         <image name="newarkStore" width="200" height="154"/>
@@ -838,7 +924,6 @@
         <image name="profileIcon" width="600" height="601"/>
         <image name="reviewStars" width="118" height="19"/>
         <image name="socialicon (1)" width="30" height="30"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

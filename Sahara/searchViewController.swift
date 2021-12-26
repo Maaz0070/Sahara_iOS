@@ -128,5 +128,14 @@ extension searchViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShopViewController") as! ShopViewController
+            self.present(vc, animated: true, completion: nil)
+     //   let storyboard = UIStoryboard(name: "Helper", bundle: nil)
+      //  let destinationVC = storyboard.instantiateViewControllerWithIdentifier("DestinationSID") as! DestinationVC
+       // destinationVC.title = products[indexPath.row]
+       // presentViewController(destinationVC, animated: true, completion: nil)
+    }
+    
     
 }
