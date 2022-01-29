@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F13EF7A278F854B0047AF19 /* PayPalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F13EF79278F854B0047AF19 /* PayPalViewController.swift */; };
 		1F19344D275B08E600B66680 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19344C275B08E600B66680 /* Models.swift */; };
 		1F3267E72777A60D0053A6EA /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3267E62777A60D0053A6EA /* PaymentViewController.swift */; };
 		1F3BDF4B2725B95D0076AC6F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3BDF4A2725B95D0076AC6F /* HomeViewController.swift */; };
@@ -14,6 +15,9 @@
 		1F5477ED274DE6B9005F9D58 /* profileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5477EC274DE6B9005F9D58 /* profileCollectionViewCell.swift */; };
 		1F5477EF274DE7BE005F9D58 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5477EE274DE7BE005F9D58 /* ShopViewController.swift */; };
 		1F62B4082719F87E009A26F1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F62B4072719F87E009A26F1 /* SignUpViewController.swift */; };
+		1F79EA82278CEF1F004060E6 /* CashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79EA81278CEF1F004060E6 /* CashViewController.swift */; };
+		1F79EA84278D2DC6004060E6 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79EA83278D2DC6004060E6 /* ProductViewController.swift */; };
+		1F9576C827A4E488009372F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F9576C727A4E488009372F6 /* GoogleService-Info.plist */; };
 		1F96612B2717D5CD00D6366D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96612A2717D5CD00D6366D /* AppDelegate.swift */; };
 		1F96612D2717D5CD00D6366D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96612C2717D5CD00D6366D /* SceneDelegate.swift */; };
 		1F96612F2717D5CD00D6366D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96612E2717D5CD00D6366D /* LogInViewController.swift */; };
@@ -33,6 +37,7 @@
 		1FADAE022747617F0086D3D2 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FADAE012747617F0086D3D2 /* ProductCollectionViewCell.swift */; };
 		1FBE5B6A27339242006D7E2B /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBE5B6927339242006D7E2B /* searchViewController.swift */; };
 		1FCCAC4E2744BBBA004BF138 /* resultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCAC4D2744BBBA004BF138 /* resultsTableViewCell.swift */; };
+		1FCE662A2779328B00F74BA6 /* BitcoinPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE66292779328B00F74BA6 /* BitcoinPaymentViewController.swift */; };
 		1FD1F026275880B80079B767 /* SocialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1F025275880B80079B767 /* SocialTableViewCell.swift */; };
 		6C55495357CE76F9ED111DAC /* Pods_Sahara.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E5F31302EE78D843C25FE3 /* Pods_Sahara.framework */; };
 		7394E84FF5E74F878BB1C2D6 /* Pods_SaharaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7B841C59FDE0068A3FAEED /* Pods_SaharaTests.framework */; };
@@ -59,6 +64,7 @@
 /* Begin PBXFileReference section */
 		0FB6DE7EA9F3B225607B2CB9 /* Pods-Sahara.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sahara.release.xcconfig"; path = "Target Support Files/Pods-Sahara/Pods-Sahara.release.xcconfig"; sourceTree = "<group>"; };
 		16B6FAA3E08FD303E665E87D /* Pods-SaharaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaharaTests.debug.xcconfig"; path = "Target Support Files/Pods-SaharaTests/Pods-SaharaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1F13EF79278F854B0047AF19 /* PayPalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPalViewController.swift; sourceTree = "<group>"; };
 		1F19344C275B08E600B66680 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		1F3267E62777A60D0053A6EA /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		1F3BDF4A2725B95D0076AC6F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +72,9 @@
 		1F5477EC274DE6B9005F9D58 /* profileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileCollectionViewCell.swift; sourceTree = "<group>"; };
 		1F5477EE274DE7BE005F9D58 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		1F62B4072719F87E009A26F1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1F79EA81278CEF1F004060E6 /* CashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashViewController.swift; sourceTree = "<group>"; };
+		1F79EA83278D2DC6004060E6 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		1F9576C727A4E488009372F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1F9661272717D5CD00D6366D /* Sahara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sahara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F96612A2717D5CD00D6366D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F96612C2717D5CD00D6366D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +98,7 @@
 		1FADAE012747617F0086D3D2 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		1FBE5B6927339242006D7E2B /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 		1FCCAC4D2744BBBA004BF138 /* resultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultsTableViewCell.swift; sourceTree = "<group>"; };
+		1FCE66292779328B00F74BA6 /* BitcoinPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPaymentViewController.swift; sourceTree = "<group>"; };
 		1FD1F025275880B80079B767 /* SocialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialTableViewCell.swift; sourceTree = "<group>"; };
 		3ADEA46D45E68A8C8A2EC38A /* Pods_Sahara_SaharaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sahara_SaharaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7B841C59FDE0068A3FAEED /* Pods_SaharaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SaharaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,7 +142,6 @@
 			children = (
 				1F9661292717D5CD00D6366D /* Sahara */,
 				1F9661402717D5CF00D6366D /* SaharaTests */,
-				1F96614A2717D5CF00D6366D /* SaharaUITests */,
 				1F9661282717D5CD00D6366D /* Products */,
 				FA6A593F6C4EF176FEA4344F /* Pods */,
 				6666CA679D5A03AC25D80890 /* Frameworks */,
@@ -174,6 +183,12 @@
 				1FAB2CEC2759D1BA00AE5F91 /* PostViewController.swift */,
 				1F19344C275B08E600B66680 /* Models.swift */,
 				1F3267E62777A60D0053A6EA /* PaymentViewController.swift */,
+				1FCE66292779328B00F74BA6 /* BitcoinPaymentViewController.swift */,
+				1F96614A2717D5CF00D6366D /* SaharaUITests */,
+				1F79EA81278CEF1F004060E6 /* CashViewController.swift */,
+				1F79EA83278D2DC6004060E6 /* ProductViewController.swift */,
+				1F13EF79278F854B0047AF19 /* PayPalViewController.swift */,
+				1F9576C727A4E488009372F6 /* GoogleService-Info.plist */,
 			);
 			path = Sahara;
 			sourceTree = "<group>";
@@ -356,6 +371,7 @@
 			files = (
 				1F9661372717D5CF00D6366D /* LaunchScreen.storyboard in Resources */,
 				1F9661342717D5CF00D6366D /* Assets.xcassets in Resources */,
+				1F9576C827A4E488009372F6 /* GoogleService-Info.plist in Resources */,
 				1F9661322717D5CD00D6366D /* Main.storyboard in Resources */,
 				1FAC4E8F2751C4F50076031F /* PostTableViewCell.xib in Resources */,
 			);
@@ -486,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FAB2CED2759D1BA00AE5F91 /* PostViewController.swift in Sources */,
+				1F79EA82278CEF1F004060E6 /* CashViewController.swift in Sources */,
 				1F4388D7272B97AA002E2D5C /* StoreCollectionViewCell.swift in Sources */,
 				1F3BDF4B2725B95D0076AC6F /* HomeViewController.swift in Sources */,
 				1FAC4E8E2751C4F50076031F /* PostTableViewCell.swift in Sources */,
@@ -495,6 +512,7 @@
 				1F3267E72777A60D0053A6EA /* PaymentViewController.swift in Sources */,
 				1FAC4E8B2751BD120076031F /* SocialViewController.swift in Sources */,
 				1F5477ED274DE6B9005F9D58 /* profileCollectionViewCell.swift in Sources */,
+				1FCE662A2779328B00F74BA6 /* BitcoinPaymentViewController.swift in Sources */,
 				1FCCAC4E2744BBBA004BF138 /* resultsTableViewCell.swift in Sources */,
 				1FAB2CE92759C68C00AE5F91 /* SocialFeedPostActionTableViewCell.swift in Sources */,
 				1FBE5B6A27339242006D7E2B /* searchViewController.swift in Sources */,
@@ -502,9 +520,11 @@
 				1F96612B2717D5CD00D6366D /* AppDelegate.swift in Sources */,
 				1F62B4082719F87E009A26F1 /* SignUpViewController.swift in Sources */,
 				1F19344D275B08E600B66680 /* Models.swift in Sources */,
+				1F13EF7A278F854B0047AF19 /* PayPalViewController.swift in Sources */,
 				1FAB2CE72759C66B00AE5F91 /* SocialFeedPostHeaderTableViewCell.swift in Sources */,
 				1FADAE022747617F0086D3D2 /* ProductCollectionViewCell.swift in Sources */,
 				1F96612D2717D5CD00D6366D /* SceneDelegate.swift in Sources */,
+				1F79EA84278D2DC6004060E6 /* ProductViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

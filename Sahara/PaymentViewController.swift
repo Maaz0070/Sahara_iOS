@@ -14,13 +14,19 @@ class PaymentViewController: UIViewController {
     @IBOutlet var segmentedControl: UISegmentedControl!
     
     @IBAction func didPressCashButton(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShopViewController") as! ShopViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CashViewController") as! CashViewController
             self.present(vc, animated: true, completion: nil)
+        
+        
     }
     
     @IBAction func didPressPayPalButton(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PayPalViewController") as! PayPalViewController
+            self.present(vc, animated: true, completion: nil)
     }
     @IBAction func didPressBitcoinButton(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "BitcoinPaymentViewController") as! BitcoinPaymentViewController
+            self.present(vc, animated: true, completion: nil)
     }
     @IBAction func didPressDogecoinButton(_ sender: Any) {
     }
@@ -34,6 +40,8 @@ class PaymentViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+  
     
 
     /*

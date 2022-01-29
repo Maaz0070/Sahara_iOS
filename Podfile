@@ -8,7 +8,14 @@ target 'Sahara' do
 
   # Pods for Sahara
   pod 'SDWebImage', :modular_headers => true
-
+  pod 'RxSwift', '~> 5.0'
+  pod 'BitcoinCore.swift'
+  pod 'BitcoinKit.swift'
+  pod 'BitcoinCashKit.swift'
+  pod 'DashKit.swift'
+  pod 'Stripe'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
   target 'SaharaTests' do
     inherit! :search_paths
     # Pods for testing

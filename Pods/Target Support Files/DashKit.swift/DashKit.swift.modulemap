@@ -1,0 +1,6 @@
+framework module DashKit {
+  umbrella header "DashKit.swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

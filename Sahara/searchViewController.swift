@@ -15,11 +15,11 @@ class searchViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var resultsView: UITableView!
     
-    
     let products = ["Computer", "PC", "Laptop"]
     let stores = ["Computer Central", "Fry's Electronics", "Best Buy"]
     let into = ["Custom PC with high performanc. Perfect for gaming and streaming. Great condition", "Custom PC with high performanc. Perfect for gaming and streaming. Great condition", "Custom PC with high performanc. Perfect for gaming and streaming. Great condition"]
-    let dollars = ["$100", "$220", "$129", "$100", "$220", "$129"]
+    let dollars = [100, 220, 129, 100, 220, 129]
+    let likes = [10, 24, 24, 24 , 456, 46, 46]
     let miles = ["3.2 mi", "4.1 mi", "6.3 mi", "3.2 mi", "4.1 mi", "6.3 mi"]
     let names = ["Central Computers", "CompE", "geekStore", "Central Computers", "CompE", "geekStore"]
     let numbers = ["510-329-0172", "510-456-7345", "510-329-0172", "510-329-0172", "510-456-7345", "510-329-0172"]
@@ -95,7 +95,7 @@ extension searchViewController: UITableViewDelegate, UITableViewDataSource {
             cell.productImage?.image = imageWithImage(image: UIImage.init(named: "pcPic")!, scaledToSize: CGSize(width: 400, height: 300))
             cell.descriptionLabel?.text = into[indexPath.row]
             cell.descriptionLabel?.numberOfLines = 0
-            cell.price?.text = dollars[indexPath.row]
+            cell.price?.text = String(dollars[indexPath.row])
             cell.distance?.text = miles[indexPath.row]
             cell.storeName?.text = names[indexPath.row]
             cell.phoneNumber?.text = numbers[indexPath.row]
@@ -104,7 +104,7 @@ extension searchViewController: UITableViewDelegate, UITableViewDataSource {
             cell.productImage?.image = imageWithImage(image: UIImage.init(named: "pcPic")!, scaledToSize: CGSize(width: 400, height: 300))
             cell.descriptionLabel?.text = into[indexPath.row]
             cell.descriptionLabel?.numberOfLines = 0
-            cell.price?.text = dollars[indexPath.row]
+            cell.price?.text = String(dollars[indexPath.row])
             cell.distance?.text = miles[indexPath.row]
             cell.storeName?.text = names[indexPath.row]
             cell.phoneNumber?.text = numbers[indexPath.row]
@@ -117,7 +117,7 @@ extension searchViewController: UITableViewDelegate, UITableViewDataSource {
             cell.productImage?.image = imageWithImage(image: UIImage.init(named: "pcPic")!, scaledToSize: CGSize(width: 400, height: 300))
             cell.descriptionLabel?.text = alls[indexPath.row]
             cell.descriptionLabel?.numberOfLines = 0
-            cell.price?.text = dollars[indexPath.row]
+            cell.price?.text = String(dollars[indexPath.row])
             cell.distance?.text = miles[indexPath.row]
             cell.storeName?.text = names[indexPath.row]
             cell.phoneNumber?.text = numbers[indexPath.row]
@@ -129,12 +129,17 @@ extension searchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShopViewController") as! ShopViewController
-            self.present(vc, animated: true, completion: nil)
-     //   let storyboard = UIStoryboard(name: "Helper", bundle: nil)
-      //  let destinationVC = storyboard.instantiateViewControllerWithIdentifier("DestinationSID") as! DestinationVC
-       // destinationVC.title = products[indexPath.row]
-       // presentViewController(destinationVC, animated: true, completion: nil)
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShopViewController") as! ShopViewController
+//            self.present(vc, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "ProductViewController") as! ProductViewController
+        destinationVC.ktitle = products[indexPath.row]
+        destinationVC.kprice = dollars[indexPath.row]
+        destinationVC.kdescription = into[indexPath.row]
+        destinationVC.kimage = UIImage(named: "pcPic")!
+        destinationVC.klikes = likes[indexPath.row]
+        
+        self.present(destinationVC, animated: true, completion: nil)
     }
     
     

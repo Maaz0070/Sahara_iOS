@@ -21,6 +21,12 @@ struct User {
     let gender: Gender
     let counts: UserCount
     let joinDate: Date
+   // let likedPosts: [String]
+}
+
+struct UserLikes {
+    let user: User
+    let products: [Product]
 }
 
 struct UserCount {
@@ -64,4 +70,19 @@ struct PostComment {
     let text: String
     let createdDate: Date
     let likes: [CommentLike]
+}
+
+
+struct Product {
+    let title: String
+    let price: Int
+    let likes: Int
+    let condition: String
+    let Brand: String
+    let Category: String
+    let Description: String
+    let location: String
+    let paymentMethods: [String]
+    let tags: [String]
+   // let seller: User
 }
