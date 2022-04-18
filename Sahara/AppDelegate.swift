@@ -12,12 +12,14 @@ import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UITabBar.appearance().barTintColor = .clear
         UITabBar.appearance().tintColor = .cyan
+        
+        FirebaseApp.configure()
         
 //        BTAppContextSwitcher.setReturnURLScheme("maaz.Sahara.payments")
 //        StripeAPI.defaultPublishableKey = "pk_test_51KKXDbKrfF4ACEuhzBeO1jdmrOWXERqh1o4BzT2MKbiIN9GqLYu5DK2uBUmErIDvZgVqyiZnMpIIIBZcIMlsb72q00YgCc0mMe"
@@ -46,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
 //        return false
 //    }
-
+    
 
 }
 

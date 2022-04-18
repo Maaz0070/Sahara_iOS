@@ -14,8 +14,11 @@ target 'Sahara' do
   pod 'BitcoinCashKit.swift'
   pod 'DashKit.swift'
   pod 'Stripe'
+  pod 'Firebase/Database'
+  pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'SwiftSoup'
   target 'SaharaTests' do
     inherit! :search_paths
     # Pods for testing

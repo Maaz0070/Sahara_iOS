@@ -12,7 +12,9 @@ ${BUILT_PRODUCTS_DIR}/DifferenceKit/DifferenceKit.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework
+${BUILT_PRODUCTS_DIR}/FirebaseDatabase/FirebaseDatabase.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseFirestore/FirebaseFirestore.framework
+${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework
 ${BUILT_PRODUCTS_DIR}/GRDB.swift/GRDB.framework
 ${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework
 ${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework
@@ -29,6 +31,7 @@ ${BUILT_PRODUCTS_DIR}/Secp256k1Kit.swift/Secp256k1Kit.framework
 ${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework
 ${BUILT_PRODUCTS_DIR}/StripeCore/StripeCore.framework
 ${BUILT_PRODUCTS_DIR}/StripeUICore/StripeUICore.framework
+${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework
 ${BUILT_PRODUCTS_DIR}/UIExtensions.swift/UIExtensions.framework
 ${BUILT_PRODUCTS_DIR}/X11Kit.swift/X11Kit.framework
 ${BUILT_PRODUCTS_DIR}/abseil/absl.framework

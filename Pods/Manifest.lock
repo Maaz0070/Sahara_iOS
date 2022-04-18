@@ -395,14 +395,40 @@ PODS:
   - DifferenceKit/Core (1.2.0)
   - DifferenceKit/UIKitExtension (1.2.0):
     - DifferenceKit/Core
+  - Firebase/Analytics (8.11.0):
+    - Firebase/Core
   - Firebase/Auth (8.11.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 8.11.0)
+  - Firebase/Core (8.11.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (~> 8.11.0)
   - Firebase/CoreOnly (8.11.0):
     - FirebaseCore (= 8.11.0)
+  - Firebase/Database (8.11.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 8.11.0)
   - Firebase/Firestore (8.11.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 8.11.0)
+  - FirebaseAnalytics (8.11.0):
+    - FirebaseAnalytics/AdIdSupport (= 8.11.0)
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
+    - GoogleUtilities/MethodSwizzler (~> 7.7)
+    - GoogleUtilities/Network (~> 7.7)
+    - "GoogleUtilities/NSData+zlib (~> 7.7)"
+    - nanopb (~> 2.30908.0)
+  - FirebaseAnalytics/AdIdSupport (8.11.0):
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleAppMeasurement (= 8.11.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
+    - GoogleUtilities/MethodSwizzler (~> 7.7)
+    - GoogleUtilities/Network (~> 7.7)
+    - "GoogleUtilities/NSData+zlib (~> 7.7)"
+    - nanopb (~> 2.30908.0)
   - FirebaseAuth (8.11.0):
     - FirebaseCore (~> 8.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
@@ -417,6 +443,9 @@ PODS:
     - GoogleUtilities/Environment (~> 7.7)
     - GoogleUtilities/Logger (~> 7.7)
     - nanopb (~> 2.30908.0)
+  - FirebaseDatabase (8.11.0):
+    - FirebaseCore (~> 8.0)
+    - leveldb-library (~> 1.22)
   - FirebaseFirestore (8.11.0):
     - abseil/algorithm (= 0.20200225.0)
     - abseil/base (= 0.20200225.0)
@@ -430,6 +459,31 @@ PODS:
     - "gRPC-C++ (~> 1.28.0)"
     - leveldb-library (~> 1.22)
     - nanopb (~> 2.30908.0)
+  - FirebaseInstallations (8.11.0):
+    - FirebaseCore (~> 8.0)
+    - GoogleUtilities/Environment (~> 7.7)
+    - GoogleUtilities/UserDefaults (~> 7.7)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleAppMeasurement (8.11.0):
+    - GoogleAppMeasurement/AdIdSupport (= 8.11.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
+    - GoogleUtilities/MethodSwizzler (~> 7.7)
+    - GoogleUtilities/Network (~> 7.7)
+    - "GoogleUtilities/NSData+zlib (~> 7.7)"
+    - nanopb (~> 2.30908.0)
+  - GoogleAppMeasurement/AdIdSupport (8.11.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 8.11.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
+    - GoogleUtilities/MethodSwizzler (~> 7.7)
+    - GoogleUtilities/Network (~> 7.7)
+    - "GoogleUtilities/NSData+zlib (~> 7.7)"
+    - nanopb (~> 2.30908.0)
+  - GoogleAppMeasurement/WithoutAdIdSupport (8.11.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
+    - GoogleUtilities/MethodSwizzler (~> 7.7)
+    - GoogleUtilities/Network (~> 7.7)
+    - "GoogleUtilities/NSData+zlib (~> 7.7)"
+    - nanopb (~> 2.30908.0)
   - GoogleDataTransport (9.1.2):
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
@@ -442,12 +496,16 @@ PODS:
     - PromisesObjC (< 3.0, >= 1.2)
   - GoogleUtilities/Logger (7.7.0):
     - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (7.7.0):
+    - GoogleUtilities/Logger
   - GoogleUtilities/Network (7.7.0):
     - GoogleUtilities/Logger
     - "GoogleUtilities/NSData+zlib"
     - GoogleUtilities/Reachability
   - "GoogleUtilities/NSData+zlib (7.7.0)"
   - GoogleUtilities/Reachability (7.7.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (7.7.0):
     - GoogleUtilities/Logger
   - GRDB.swift (4.14.0):
     - GRDB.swift/standard (= 4.14.0)
@@ -512,6 +570,7 @@ PODS:
   - StripeCore (21.11.1)
   - StripeUICore (21.11.1):
     - StripeCore (= 21.11.1)
+  - SwiftSoup (2.3.8)
   - UIExtensions.swift (1.1.1)
   - X11Kit.swift (1.0)
 
@@ -521,11 +580,14 @@ DEPENDENCIES:
   - BitcoinCore.swift
   - BitcoinKit.swift
   - DashKit.swift
+  - Firebase/Analytics
   - Firebase/Auth
+  - Firebase/Database
   - Firebase/Firestore
   - RxSwift (~> 5.0)
   - SDWebImage
   - Stripe
+  - SwiftSoup
 
 SPEC REPOS:
   trunk:
@@ -541,10 +603,14 @@ SPEC REPOS:
     - DashKit.swift
     - DifferenceKit
     - Firebase
+    - FirebaseAnalytics
     - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreDiagnostics
+    - FirebaseDatabase
     - FirebaseFirestore
+    - FirebaseInstallations
+    - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
     - GRDB.swift
@@ -565,6 +631,7 @@ SPEC REPOS:
     - Stripe
     - StripeCore
     - StripeUICore
+    - SwiftSoup
     - UIExtensions.swift
     - X11Kit.swift
 
@@ -581,10 +648,14 @@ SPEC CHECKSUMS:
   DashKit.swift: 0a0faf547999ed9a2e61fa788487cb892169e634
   DifferenceKit: 5659c430bb7fe45876fa32ce5cba5d6167f0c805
   Firebase: 44dd9724c84df18b486639e874f31436eaa9a20c
+  FirebaseAnalytics: 4e4b13031034e6561ed3bd1d47b6fdabbd6487c6
   FirebaseAuth: d96d73aba85d192d7a7aa0b86dd6d7f8ec170b4b
   FirebaseCore: 2f4f85b453cc8fea4bb2b37e370007d2bcafe3f0
   FirebaseCoreDiagnostics: 64d9709d804a6c25bd77841371c1fcfd909d5601
+  FirebaseDatabase: ff9b4c7bee14d9f561f26c64a28ac083989f03d5
   FirebaseFirestore: 3b2e4b532c68809b3df5f8d39d28b3398ffc196b
+  FirebaseInstallations: 044eede8a049bce71c4541ee68d6e4364fcbe774
+  GoogleAppMeasurement: aa3cb422fab2b05d2efac543a5720d1a85b9dea5
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   GRDB.swift: 8cc3ab7c8b8b4ac1761deb8dca4b51c1c9d429f8
@@ -605,9 +676,10 @@ SPEC CHECKSUMS:
   Stripe: f2bed8369154c35c8ec794704e042e05240d6f21
   StripeCore: 36571be19dae15e90c8ad47e1af45712aea93f5a
   StripeUICore: 1b32566d6a69581be786609a032872b0fb5a6823
+  SwiftSoup: ba8ea2c91151881a298cba4b0628ef31e835a77f
   UIExtensions.swift: 3ed084c0343ddd0f86c7c558d37759e1fd7d5778
   X11Kit.swift: 6cfd05473e41c7b866c1a016300da02af63ad049
 
-PODFILE CHECKSUM: a8dd18c46fc3278e4d99eb1169043163ca90eb3c
+PODFILE CHECKSUM: 0dc6e8866c48ee01d7099d99d7be13d2277aa000
 
 COCOAPODS: 1.11.2
