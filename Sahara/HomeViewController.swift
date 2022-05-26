@@ -70,27 +70,52 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     {
         
 
-        guard let btnTitle = searchQ.largeContentTitle else { return }
+        print("1 - searchBarSearchButtonClicked")
+            
+        guard let btnTitle = searchQ.text else {
+                print("2 - FAILED to get searchQ.largeContentTitle")
+                return
+            }
+            
+            print("2 - got btnTitle", btnTitle)
+            
+            if let tb = self.tabBarController {
+                print("3 - got a tab bar controller reference")
+                if let controllers = tb.viewControllers {
+                    print("4 - got controllers reference")
+                    print("4.5 - " + String(controllers.count))
+                    if controllers.count == 5 {
+                        print("5 - we have 5 controllers")
+                        if let resultVC = controllers[3] as? searchViewController {
+                            
+                            
+                            print("6 - got a reference to searchViewController")
 
-                // make sure we are in a tab bar controller
-                // get its controllers
-                // make sure there are 4 tabs
-                // get the 4th tab as SearchViewController
-            if let tb = self.tabBarController,
-               let controllers = tb.viewControllers,
-               controllers.count == 4,
-               let resultVC = controllers[3] as? searchViewController {
-                
-                // if we have not yet selected the 4th tab,
-                //    the view will not yet have been loaded
-                //    so make sure it is
-                resultVC.loadViewIfNeeded()
-                
-                // call the func, passing the button title
-                resultVC.doAthing(searchQ)
-                
-                // switch to the 4th tab
-                tb.selectedIndex = 3
+                            // if we have not yet selected the 4th tab,
+                            //    the view will not yet have been loaded
+                            //    so make sure it is
+                            resultVC.loadViewIfNeeded()
+                            
+                            // call the func, passing the button title
+                            resultVC.doAthing(searchQ)
+                            
+                            // switch to the 4th tab
+                            tb.selectedIndex = 3
+
+                            print("7 - we should now be at searchViewController")
+                            
+                        } else {
+                            print("6 - FAILED TO GET a reference to searchViewController")
+                        }
+                    } else {
+                        print("5 - FAILED TO GET a reference to searchViewController")
+                    }
+                } else {
+                    print("4 - FAILED TO GET a reference to searchViewController")
+                }
+            } else {
+                print("3 - FAILED TO GET a reference to searchViewController")
+            }
     }
     }
     
@@ -107,4 +132,4 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     */
    
 
-}
+

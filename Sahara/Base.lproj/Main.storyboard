@@ -361,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkS-b6-B5e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1528.985507246377" y="1705.5803571428571"/>
+            <point key="canvasLocation" x="1428" y="1706"/>
         </scene>
         <!--Home-->
         <scene sceneID="KNh-TH-s8e">
@@ -971,7 +971,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfL-a6-nD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="75Y-cp-EqT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5368.115942028986" y="1705.5803571428571"/>
+            <point key="canvasLocation" x="4490" y="1706"/>
         </scene>
         <!--BitcoinPaymentViewController-->
         <scene sceneID="vKl-G0-Bdw">
@@ -1148,7 +1148,7 @@
             </objects>
             <point key="canvasLocation" x="5976.811594202899" y="2398.6607142857142"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Item-->
         <scene sceneID="6v3-a1-3wq">
             <objects>
                 <viewController storyboardIdentifier="SearchViewController" id="SCn-G2-cjw" customClass="searchViewController" customModule="Sahara" customModuleProvider="target" sceneMemberID="viewController">
@@ -1268,6 +1268,7 @@
                         <viewLayoutGuide key="safeArea" id="1mo-Io-Qnu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="magnifyingglass" catalog="system" id="y56-Or-cfo"/>
                     <navigationItem key="navigationItem" id="qq9-si-Qga"/>
                     <connections>
                         <outlet property="resultsView" destination="Ybi-vz-y87" id="MlA-bB-SMN"/>
@@ -1278,7 +1279,7 @@
                 <exit id="yDD-9m-eA8" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4W-bF-mn9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4532" y="1715"/>
+            <point key="canvasLocation" x="3704" y="1706"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UWe-et-0gc">
@@ -1291,11 +1292,11 @@
                         <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ROY-Nx-DhQ" kind="relationship" relationship="viewControllers" id="PuD-bS-KCJ"/>
-                        <segue destination="5nz-GG-fYV" kind="relationship" relationship="viewControllers" id="84E-Gt-ikr"/>
-                        <segue destination="c4c-SD-h0U" kind="relationship" relationship="viewControllers" id="zHs-sQ-9CC"/>
-                        <segue destination="hf1-g7-hAh" kind="relationship" relationship="viewControllers" destinationCreationSelector="SearchViewController" id="seS-wG-eS2"/>
-                        <segue destination="8cN-Ig-I8u" kind="relationship" relationship="viewControllers" id="FcF-ci-Vv5"/>
+                        <segue destination="ROY-Nx-DhQ" kind="relationship" relationship="viewControllers" id="Vqc-pU-WsW"/>
+                        <segue destination="5nz-GG-fYV" kind="relationship" relationship="viewControllers" id="0ZB-XO-Lf6"/>
+                        <segue destination="c4c-SD-h0U" kind="relationship" relationship="viewControllers" id="SZ7-U9-afX"/>
+                        <segue destination="SCn-G2-cjw" kind="relationship" relationship="viewControllers" id="z1r-Pb-B1A"/>
+                        <segue destination="8cN-Ig-I8u" kind="relationship" relationship="viewControllers" id="jip-92-a1R"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcc-Zr-jhf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1320,26 +1321,6 @@
             </objects>
             <point key="canvasLocation" x="660.86956521739137" y="199.55357142857142"/>
         </scene>
-        <!--Search-->
-        <scene sceneID="oex-xt-hcj">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hf1-g7-hAh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="Webp.net-resizeimage (1)" selectedImage="Webp.net-resizeimage (1)" id="yuJ-R5-Ohu"/>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="hrw-kW-6CB"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Dy-gb-Siu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="SCn-G2-cjw" kind="relationship" relationship="rootViewController" id="n32-rn-rJz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u0U-e1-Y32" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3716" y="1715"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Sahara_Logo" width="292" height="76"/>
@@ -1348,7 +1329,6 @@
         <image name="Screen Shot 2021-10-15 at 11.08.24 AM" width="361" height="53"/>
         <image name="Screen Shot 2021-10-15 at 11.09.57 AM" width="361" height="50"/>
         <image name="Webp.net-resizeimage" width="30" height="20"/>
-        <image name="Webp.net-resizeimage (1)" width="30" height="30"/>
         <image name="Webp.net-resizeimage (10)" width="50" height="50"/>
         <image name="Webp.net-resizeimage (11)" width="50" height="50"/>
         <image name="Webp.net-resizeimage (15)" width="125" height="125"/>
@@ -1362,6 +1342,7 @@
         <image name="clothicon" width="50" height="50"/>
         <image name="heart.circle" catalog="system" width="128" height="121"/>
         <image name="homeIcon" width="32" height="37"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="mappin.circle.fill" catalog="system" width="128" height="121"/>
         <image name="newarkStore" width="200" height="154"/>
         <image name="pcPic" width="200" height="135"/>

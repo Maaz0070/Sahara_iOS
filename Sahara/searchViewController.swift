@@ -261,6 +261,15 @@ class searchViewController: UIViewController{
                 }
                 //images.append(try! image.downloaded(from: image.attr("src")))
             }
+                for _ in ((phones.count)...(names.count))
+                {
+                    phones.append("N/A")
+                }
+                for _ in ((ratings.count)...(names.count))
+                {
+                    ratings.append(0)
+                }
+                
             dismiss(animated: false, completion: nil)
             resultsView.reloadData()
             
