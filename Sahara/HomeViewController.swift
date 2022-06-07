@@ -19,9 +19,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet weak var scrollView: UIScrollView!
     
-    
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+   
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(collectionView == storesCollectionView) {
                 return storesImages.count
             }
@@ -117,7 +116,255 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 print("3 - FAILED TO GET a reference to searchViewController")
             }
     }
+    
+    @IBAction func clothFilter(_ sender: Any) {
+        
+        if let tb = self.tabBarController {
+            print("3 - got a tab bar controller reference")
+            if let controllers = tb.viewControllers {
+                print("4 - got controllers reference")
+                print("4.5 - " + String(controllers.count))
+                if controllers.count == 5 {
+                    print("5 - we have 5 controllers")
+                    if let resultVC = controllers[3] as? searchViewController {
+                        
+                        
+                        print("6 - got a reference to searchViewController")
+
+                        // if we have not yet selected the 4th tab,
+                        //    the view will not yet have been loaded
+                        //    so make sure it is
+                        resultVC.loadViewIfNeeded()
+                        
+                        // call the func, passing the button title
+                        resultVC.doAthingf(filter: "clothing")
+                        
+                        // switch to the 4th tab
+                        tb.selectedIndex = 3
+
+                        print("7 - we should now be at searchViewController")
+                        
+                    } else {
+                        print("6 - FAILED TO GET a reference to searchViewController")
+                    }
+                } else {
+                    print("5 - FAILED TO GET a reference to searchViewController")
+                }
+            } else {
+                print("4 - FAILED TO GET a reference to searchViewController")
+            }
+        } else {
+            print("3 - FAILED TO GET a reference to searchViewController")
+        }
+        
     }
+    
+    
+    @IBAction func accFilter(_ sender: Any) {
+        
+        if let tb = self.tabBarController {
+            print("3 - got a tab bar controller reference")
+            if let controllers = tb.viewControllers {
+                print("4 - got controllers reference")
+                print("4.5 - " + String(controllers.count))
+                if controllers.count == 5 {
+                    print("5 - we have 5 controllers")
+                    if let resultVC = controllers[3] as? searchViewController {
+                        
+                        
+                        print("6 - got a reference to searchViewController")
+
+                        // if we have not yet selected the 4th tab,
+                        //    the view will not yet have been loaded
+                        //    so make sure it is
+                        resultVC.loadViewIfNeeded()
+                        
+                        // call the func, passing the button title
+                        resultVC.doAthingf(filter: "accessories")
+                        
+                        // switch to the 4th tab
+                        tb.selectedIndex = 3
+
+                        print("7 - we should now be at searchViewController")
+                        
+                    } else {
+                        print("6 - FAILED TO GET a reference to searchViewController")
+                    }
+                } else {
+                    print("5 - FAILED TO GET a reference to searchViewController")
+                }
+            } else {
+                print("4 - FAILED TO GET a reference to searchViewController")
+            }
+        } else {
+            print("3 - FAILED TO GET a reference to searchViewController")
+        }
+
+    }
+    
+    @IBAction func electronicFilter(_ sender: Any) {
+        if let tb = self.tabBarController {
+            print("3 - got a tab bar controller reference")
+            if let controllers = tb.viewControllers {
+                print("4 - got controllers reference")
+                print("4.5 - " + String(controllers.count))
+                if controllers.count == 5 {
+                    print("5 - we have 5 controllers")
+                    if let resultVC = controllers[3] as? searchViewController {
+                        
+                        
+                        print("6 - got a reference to searchViewController")
+
+                        // if we have not yet selected the 4th tab,
+                        //    the view will not yet have been loaded
+                        //    so make sure it is
+                        resultVC.loadViewIfNeeded()
+                        
+                        // call the func, passing the button title
+                        resultVC.doAthingf(filter: "electronics")
+                        
+                        // switch to the 4th tab
+                        tb.selectedIndex = 3
+
+                        print("7 - we should now be at searchViewController")
+                        
+                    } else {
+                        print("6 - FAILED TO GET a reference to searchViewController")
+                    }
+                } else {
+                    print("5 - FAILED TO GET a reference to searchViewController")
+                }
+            } else {
+                print("4 - FAILED TO GET a reference to searchViewController")
+            }
+        } else {
+            print("3 - FAILED TO GET a reference to searchViewController")
+        }
+
+    }
+    
+    @IBAction func pharmacyFilter(_ sender: Any) {
+        if let tb = self.tabBarController {
+            print("3 - got a tab bar controller reference")
+            if let controllers = tb.viewControllers {
+                print("4 - got controllers reference")
+                print("4.5 - " + String(controllers.count))
+                if controllers.count == 5 {
+                    print("5 - we have 5 controllers")
+                    if let resultVC = controllers[3] as? searchViewController {
+                        
+                        
+                        print("6 - got a reference to searchViewController")
+
+                        // if we have not yet selected the 4th tab,
+                        //    the view will not yet have been loaded
+                        //    so make sure it is
+                        resultVC.loadViewIfNeeded()
+                        
+                        // call the func, passing the button title
+                        resultVC.doAthingf(filter: "pharmacy")
+                        
+                        // switch to the 4th tab
+                        tb.selectedIndex = 3
+
+                        print("7 - we should now be at searchViewController")
+                        
+                    } else {
+                        print("6 - FAILED TO GET a reference to searchViewController")
+                    }
+                } else {
+                    print("5 - FAILED TO GET a reference to searchViewController")
+                }
+            } else {
+                print("4 - FAILED TO GET a reference to searchViewController")
+            }
+        } else {
+            print("3 - FAILED TO GET a reference to searchViewController")
+        }
+
+    }
+    
+    @IBAction func carFilter(_ sender: Any) {
+        if let tb = self.tabBarController {
+            print("3 - got a tab bar controller reference")
+            if let controllers = tb.viewControllers {
+                print("4 - got controllers reference")
+                print("4.5 - " + String(controllers.count))
+                if controllers.count == 5 {
+                    print("5 - we have 5 controllers")
+                    if let resultVC = controllers[3] as? searchViewController {
+                        
+                        
+                        print("6 - got a reference to searchViewController")
+
+                        // if we have not yet selected the 4th tab,
+                        //    the view will not yet have been loaded
+                        //    so make sure it is
+                        resultVC.loadViewIfNeeded()
+                        
+                        // call the func, passing the button title
+                        resultVC.doAthingf(filter: "cars")
+                        
+                        // switch to the 4th tab
+                        tb.selectedIndex = 3
+
+                        print("7 - we should now be at searchViewController")
+                        
+                    } else {
+                        print("6 - FAILED TO GET a reference to searchViewController")
+                    }
+                } else {
+                    print("5 - FAILED TO GET a reference to searchViewController")
+                }
+            } else {
+                print("4 - FAILED TO GET a reference to searchViewController")
+            }
+        } else {
+            print("3 - FAILED TO GET a reference to searchViewController")
+        }
+
+    }
+    @IBAction func moreFilter(_ sender: Any) {
+        if let tb = self.tabBarController {
+            print("3 - got a tab bar controller reference")
+            if let controllers = tb.viewControllers {
+                print("4 - got controllers reference")
+                print("4.5 - " + String(controllers.count))
+                if controllers.count == 5 {
+                    print("5 - we have 5 controllers")
+                    if let resultVC = controllers[3] as? searchViewController {
+                        
+                        
+                        print("6 - got a reference to searchViewController")
+
+                        // if we have not yet selected the 4th tab,
+                        //    the view will not yet have been loaded
+                        //    so make sure it is
+                        resultVC.loadViewIfNeeded()
+                        
+                        // call the func, passing the button title
+                        resultVC.doAthingf(filter: "clothing")
+                        
+                        // switch to the 4th tab
+                        tb.selectedIndex = 3
+
+                        print("7 - we should now be at searchViewController")
+                        
+                    } else {
+                        print("6 - FAILED TO GET a reference to searchViewController")
+                    }
+                } else {
+                    print("5 - FAILED TO GET a reference to searchViewController")
+                }
+            } else {
+                print("4 - FAILED TO GET a reference to searchViewController")
+            }
+        } else {
+            print("3 - FAILED TO GET a reference to searchViewController")
+        }
+
+    }
+}
     
     
 

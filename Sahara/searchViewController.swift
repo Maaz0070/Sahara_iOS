@@ -289,6 +289,198 @@ class searchViewController: UIViewController{
         }
         }
     
+    func doAthingf(filter: String) {
+        
+        do {
+        
+        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+        
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.medium
+        loadingIndicator.startAnimating();
+
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
+        
+                    
+        print("reached here")
+            let html = try String(contentsOf: URL(string: "https://www.locally.com/search/all/activities/" + filter + "?sort=all")!)
+                              
+        //let doc: Document = try SwiftSoup.parse(html)
+        guard let titles: Elements = try? SwiftSoup.parse(html).getElementsByClass("product-thumb ") else {return}//select("a") else {return}
+        guard let prices: Elements = try? SwiftSoup.parse(html).getElementsByClass("product-thumb-price dl-price") else {return}
+        guard let Stores: Elements = try? SwiftSoup.parse(html).getElementsByClass("filter-label-link") else {return}
+        guard let Images: Elements = try? SwiftSoup.parse(html).getElementsByClass("product-thumb-img") else {return}
+       
+        
+        
+        products = []
+        miles = []
+        dollars = []
+        names = []
+        images = []
+        stars = []
+        
+        for title: Element in titles.array() {
+            print("title" + String(titles.size()))
+            products.append(try! title.attr("data-product-name"))
+            
+            guard let url: URL = try? URL(string:  "https://www.locally.com/" + String(try! title.attr("href")))
+            else
+            {
+                miles.append("-")
+                continue
+                
+            }
+            
+            let html1 = try String(contentsOf: url)
+            guard let distances: Element = try? SwiftSoup.parse(html1).getElementsByClass("conv-section-distance dl-store-distance").first()
+            else
+            {
+                miles.append("-")
+                continue
+                
+            }
+            print(try! distances.ownText())
+            miles.append(try! distances.ownText())
+            guard let K: Array<String> = try? SwiftSoup.parse(html1).getElementsByClass("breadcrumbs container").eachText() else {return}
+            let str = (try! K.last!.components(separatedBy: "/") )
+            if(str[str.count - 2] != nil)
+            {
+                categories.append(str[str.count - 2])
+                print(str[str.count - 2])
+
+            }
+            else{
+                categories.append("-")
+                
+            }
+            
+            guard let desc: Array<String> = try? SwiftSoup.parse(html1).getElementsByClass("pdp-information").eachText() else {return}
+            
+            guard let s:String = try? desc[1]
+            else {
+                return
+            }
+            descriptions.append( String( s.suffix(s.count - 19) ) )
+            print( String( s.suffix(s.count - 19) ) )
+            
+            guard let star: Element = try? SwiftSoup.parse(html1).getElementsByClass("stars").first()
+            else
+            {
+                print("no reviews")
+                ratings.append(0)
+                continue
+                
+            }
+            
+            print(try! star.attr("data-rating"))
+            //ratings.append(try! star.attr("data-rating")) ?? ()
+            
+            let x = Double(try! star.attr("data-rating")) ?? 0
+            print("y: " + String(Int(x)))
+            
+            ratings.append(x)
+            
+            guard let locations: Element = try? SwiftSoup.parse(html1).getElementsByClass("conv-section-store-address section-subtitle dl-store-address js-store-location").first()
+            else
+            {
+                print("cant find city")
+                return
+            }
+            
+            let string = locations.ownText()
+            print("location: " + String(string.prefix(string.count - 10)) )
+            cities.append(try! String(string.prefix(string.count - 10)))
+            
+            
+            guard let phoneNums: Element = try? SwiftSoup.parse(html1).getElementsByClass("selected-retailer-info-link btn-action-sm tooltip").first()
+            else
+            {
+                print("link not found")
+                return
+            }
+            
+            guard let urls:URL = try? URL(string: "https://www.locally.com/" +  phoneNums.attr("href") )
+            else
+            {
+                return
+            }
+
+            let html2 = try String(contentsOf: urls )
+
+            guard let storePage:Element = try? SwiftSoup.parse(html2).getElementsByClass("landing-page-phone-label").first() else {
+                print("Phone Number not found")
+                return
+                
+            }
+            
+            let sp = try? storePage.ownText
+            if let s = sp {
+                phones.append(try! s())
+            }
+            else {
+                phones.append("N/A")
+            }
+
+            print(try! storePage.ownText())
+//
+           // let html1 = try String(contentsOf: url)
+            
+            
+            
+            
+        }
+        for price: Element in prices.array() {
+            print("prices" + String(prices.size()))
+            print(String(try! price.ownText()))
+            dollars.append(try! price.ownText())
+        }
+        for store: Element in Stores.array() {
+            print("Stores" + String(Stores.size()))
+            names.append(try! store.ownText()) ?? names.append("N/A")
+        }
+        for image: Element in Images.array() {
+            guard let url = URL(string: try! image.attr("src") ) else { return }
+            let data = try? Data(contentsOf: url)
+            
+            if let imageData = data {
+                images.append( UIImage(data: imageData)! )
+            }
+            else {
+                images.append(UIImage(named: "pcPic")!)
+            }
+            //images.append(try! image.downloaded(from: image.attr("src")))
+        }
+            for _ in ((phones.count)...(names.count))
+            {
+                phones.append("N/A")
+            }
+            for _ in ((ratings.count)...(names.count))
+            {
+                ratings.append(0)
+            }
+            
+        dismiss(animated: false, completion: nil)
+        resultsView.reloadData()
+        
+        
+       
+        
+        //let titles: Elements = try doc.select("a[product-thumb]")
+        //let titles: String = try doc.select("a").attr("product-thumb")
+        
+       // print(titles)
+        
+    } catch Exception.Error(type: let type, Message: let message) {
+        print(type)
+        print(message)
+    } catch {
+        print("")
+    }
+    }
+    
     
     
 

@@ -385,6 +385,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="clothicon" title=""/>
+                                        <connections>
+                                            <action selector="clothFilter:" destination="c4c-SD-h0U" eventType="touchUpInside" id="36N-Mt-dhA"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clothes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFJ-eZ-kDX">
                                         <rect key="frame" x="40" y="129" width="65" height="23"/>
@@ -398,6 +401,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Webp.net-resizeimage (5)" title=""/>
+                                        <connections>
+                                            <action selector="accFilter:" destination="c4c-SD-h0U" eventType="touchUpInside" id="MaU-QH-2av"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Accessories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ft-1m-EfP">
                                         <rect key="frame" x="161" y="130" width="92" height="21"/>
@@ -411,6 +417,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Webp.net-resizeimage (7)" title=""/>
+                                        <connections>
+                                            <action selector="electronicFilter:" destination="c4c-SD-h0U" eventType="touchUpInside" id="siw-k6-X3K"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Electronics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCb-Pj-Un1">
                                         <rect key="frame" x="293" y="130" width="85" height="21"/>
@@ -424,6 +433,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Webp.net-resizeimage (8)" title=""/>
+                                        <connections>
+                                            <action selector="pharmacyFilter:" destination="c4c-SD-h0U" eventType="touchUpInside" id="CRo-TH-00j"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pharmacy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mby-Yc-Kzh">
                                         <rect key="frame" x="37" y="220" width="77" height="21"/>
@@ -437,6 +449,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Webp.net-resizeimage (10)" title=""/>
+                                        <connections>
+                                            <action selector="carFilter:" destination="c4c-SD-h0U" eventType="touchUpInside" id="jhD-A7-9w1"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cars &amp; Trucks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjO-YQ-pvP">
                                         <rect key="frame" x="157" y="220" width="107" height="21"/>
@@ -580,6 +595,15 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="See More"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTV-bF-hM8">
+                                        <rect key="frame" x="299" y="161" width="74" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Webp.net-resizeimage (11)" title=""/>
+                                        <connections>
+                                            <action selector="moreFilter:" destination="c4c-SD-h0U" eventType="touchUpInside" id="hhc-a1-UEN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="iCk-gw-Lhq"/>
