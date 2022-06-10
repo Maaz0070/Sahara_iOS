@@ -55,7 +55,8 @@ class SocialViewController: UIViewController{
                         birthDate: Date(),
                         gender: .male,
                         counts: UserCount(followers: 1, following: 1, posts: 1),
-                        joinDate: Date())
+                        joinDate: Date(),
+                        password: "")
         
         let post = UserPost(identifier: "",
                             postType: .photo,

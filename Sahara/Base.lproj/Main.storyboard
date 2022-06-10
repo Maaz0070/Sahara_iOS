@@ -12,7 +12,7 @@
         <!--LogInViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="LogInViewController" id="BYZ-38-t0r" customClass="LogInViewController" customModule="Sahara" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInViewController" title="LogInViewController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LogInViewController" customModule="Sahara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Screen Shot 2021-10-13 at 8.53.39 PM" title=""/>
                                 <connections>
-                                    <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5jq-XV-e6O"/>
+                                    <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wme-s1-EFV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g40-Ws-ATV">
@@ -32,7 +32,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Screen Shot 2021-10-13 at 8.56.27 PM"/>
                                 <connections>
-                                    <segue destination="R4G-hd-VM5" kind="show" id="pv3-Oo-jXO"/>
+                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I36-oE-hYy"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTn-ku-0yf">
@@ -54,12 +54,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="emailField:" destination="azX-t1-AAh" eventType="valueChanged" id="8r8-0t-IZg"/>
-                                    <action selector="emailField:" destination="azX-t1-AAh" eventType="editingDidEnd" id="FYL-gd-4yY"/>
-                                    <action selector="emailField:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="mdU-Hi-iHe"/>
-                                    <action selector="emailield:" destination="azX-t1-AAh" eventType="touchUpInside" id="toR-nP-vUX"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eht-F6-pV2">
                                 <rect key="frame" x="42" y="438" width="74" height="21"/>
@@ -73,9 +67,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="passwordField:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="mjy-Fo-x2q"/>
-                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -83,19 +74,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="9ny-52-GVD"/>
                     <connections>
-                        <outlet property="emailField" destination="GFB-Pg-ldP" id="omF-0V-Qcr"/>
-                        <outlet property="passwordField" destination="eKD-q6-lQu" id="2Fu-eG-vsH"/>
+                        <outlet property="emailField" destination="GFB-Pg-ldP" id="inm-si-PAy"/>
+                        <outlet property="passwordField" destination="eKD-q6-lQu" id="ybJ-GV-TKG"/>
+                        <segue destination="HVT-GF-hKu" kind="presentation" identifier="seg" modalPresentationStyle="fullScreen" id="tli-Td-ji2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="azX-t1-AAh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1559" y="200"/>
         </scene>
         <!--SignUpViewController-->
         <scene sceneID="h7q-1n-Lyc">
             <objects>
-                <viewController title="SignUpViewController" id="R4G-hd-VM5" customClass="SignUpViewController" customModule="Sahara" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" title="SignUpViewController" id="R4G-hd-VM5" customClass="SignUpViewController" customModule="Sahara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gby-mW-paW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,6 +141,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Screen Shot 2021-10-15 at 11.09.57 AM" title=""/>
+                                <connections>
+                                    <action selector="signUp:" destination="R4G-hd-VM5" eventType="touchUpInside" id="v1X-is-Xyk"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1z9-4M-Ewk">
                                 <rect key="frame" x="51" y="121" width="190" height="66"/>
@@ -163,10 +157,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Xlu-ow-cXm"/>
+                    <connections>
+                        <outlet property="email" destination="KQw-t2-Wrx" id="mqy-XQ-LDs"/>
+                        <outlet property="password" destination="w68-FK-cXl" id="8ih-5f-65R"/>
+                        <outlet property="username" destination="30G-HZ-qFS" id="HZo-nA-1uI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TjD-YU-aNx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2639.130434782609" y="199.55357142857142"/>
+            <point key="canvasLocation" x="3366.666666666667" y="164.73214285714286"/>
         </scene>
         <!--Shop-->
         <scene sceneID="XGP-VN-Oys">
@@ -366,7 +365,7 @@
         <!--Home-->
         <scene sceneID="KNh-TH-s8e">
             <objects>
-                <viewController id="c4c-SD-h0U" customClass="HomeViewController" customModule="Sahara" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="c4c-SD-h0U" customClass="HomeViewController" customModule="Sahara" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U89-Eq-qgt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1308,7 +1307,8 @@
         <!--Tab Bar Controller-->
         <scene sceneID="UWe-et-0gc">
             <objects>
-                <tabBarController id="HVT-GF-hKu" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="HVT-GF-hKu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nfB-Ua-wda"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XFG-wx-D1v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1344,6 +1344,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Aa-YH-i8H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="660.86956521739137" y="199.55357142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QtN-PY-sLx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QUu-ZA-3nL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pe5-FI-ejk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R4G-hd-VM5" kind="relationship" relationship="rootViewController" id="4Ai-sP-y9f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7t-v2-WUq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2456.521739130435" y="164.73214285714286"/>
         </scene>
     </scenes>
     <resources>

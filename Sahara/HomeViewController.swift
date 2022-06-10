@@ -221,7 +221,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                         resultVC.loadViewIfNeeded()
                         
                         // call the func, passing the button title
-                        resultVC.doAthingf(filter: "electronics")
+                        resultVC.doAthingf(filter: "electronic")
                         
                         // switch to the 4th tab
                         tb.selectedIndex = 3

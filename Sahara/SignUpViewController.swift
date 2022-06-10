@@ -10,6 +10,10 @@ import UIKit
 class SignUpViewController: UIViewController {
 
 
+    @IBOutlet var username: UITextField!
+    @IBOutlet var email: UITextField!
+    @IBOutlet var password: UITextField!
+    
     
     
     override func viewDidLoad() {
@@ -19,6 +23,24 @@ class SignUpViewController: UIViewController {
     }
     
 
+    @IBAction func signUp(_ sender: Any) {
+        let username = username.text!
+        let email = email.text!
+        let password = password.text!
+        
+//        let userC = UserCount.init(followers: 0, following: 0, posts: 0)
+//        let d = Date()
+//        let u = (URL(string: "https://www.google.com/") ?? URL(string: ""))!
+//            
+//        User.init(username: username, bio: "N/A", name: ("N/A", "N/A"), profilePhoto: u, birthDate: Date(), gender: Gender.male, counts: userC, joinDate: Date(), password: password)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "LogInViewController") as! LogInViewController
+        destinationVC.kusername = username
+        destinationVC.kpassword = password
+
+        self.navigationController?.pushViewController(destinationVC, animated: true)
+    }
     /*
     // MARK: - Navigation
 

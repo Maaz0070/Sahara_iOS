@@ -461,6 +461,22 @@ class searchViewController: UIViewController{
             {
                 ratings.append(0)
             }
+            for _ in ((categories.count)...(names.count))
+            {
+                categories.append("N/A")
+            }
+            for _ in ((miles.count)...(names.count))
+            {
+                miles.append("-")
+            }
+            for _ in ((descriptions.count)...(names.count))
+            {
+                descriptions.append("N/A")
+            }
+            for _ in ((cities.count)...(names.count))
+            {
+                cities.append("N/A")
+            }
             
         dismiss(animated: false, completion: nil)
         resultsView.reloadData()
