@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import SwiftSoup
+
+
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate{
     
@@ -19,12 +22,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    var storesImages:[UIImage] = []
+    var productsImages:[UIImage] = []
+    
    
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(collectionView == storesCollectionView) {
-                return storesImages.count
+                return 2 //storesImages.count
             }
-            return productsImages.count
+            return 5//productsImages.count
     }
     
     
@@ -32,31 +38,79 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
        
         
         if(collectionView == storesCollectionView) {
-            let cell2 = storesCollectionView.dequeueReusableCell(withReuseIdentifier: "storesCell", for: indexPath) as! StoreCollectionViewCell
-            cell2.compstoreImage.image = UIImage(named: storesImages[indexPath.row])
+           
+            let cell = storesCollectionView.dequeueReusableCell(withReuseIdentifier: "storesCell", for: indexPath) as! StoreCollectionViewCell
+            let html = try! String(contentsOf: URL(string: "https://www.locally.com/retailers")!)
             
-            return cell2
+            guard let brands: Elements = try? SwiftSoup.parse(html).getElementsByClass("location-thumb-img") else {return cell}
+          
+                    
+            for brand in 0...(brands.size()/100) {
+                print("title" + String(brands.size()))
+//                self.productsImages.append(try! brand.ownText())
+//                print(try! brand.ownText() + " -image")
+                
+                guard let url = URL(string: try! brands[brand].attr("src")) else {return cell}
+                print("url")
+                let data = try? Data(contentsOf: url)
+                
+                if let imageData = data {
+                    storesImages.append( UIImage(data: imageData)! )
+                    cell.compstoreImage.image = UIImage(data: imageData)!
+                }
+                else {
+                    productsImages.append(UIImage(named: "pcPic")!)
+                }
+                
         }
-        else{
-            let cell = productCollectionView.dequeueReusableCell(withReuseIdentifier: "productsCell", for: indexPath) as! ProductCollectionViewCell
-            cell.pillImage.image = UIImage(named: productsImages[indexPath.row])
-            
             return cell
         }
+        else{
+           
+
+            let cell = productCollectionView.dequeueReusableCell(withReuseIdentifier: "productsCell", for: indexPath) as! ProductCollectionViewCell
+            let html = try! String(contentsOf: URL(string: "https://www.locally.com/brands")!)
+            
+            guard let brands: Elements = try? SwiftSoup.parse(html).getElementsByClass("brand-thumb-img") else {return cell}
+          
+                    
+            for brand in 0...(brands.size()/100) {
+                print("title" + String(brands.size()))
+//                self.productsImages.append(try! brand.ownText())
+//                print(try! brand.ownText() + " -image")
+                
+                guard let url = URL(string: try! brands[brand].attr("src")) else {return cell}
+                print("url")
+                let data = try? Data(contentsOf: url)
+                
+                if let imageData = data {
+                    productsImages.append( UIImage(data: imageData)! )
+                    cell.pillImage.image = UIImage(data: imageData)!
+                }
+                else {
+                    productsImages.append(UIImage(named: "pcPic")!)
+                }
+                
+            }
+         //   cell.pillImage.image = UIImage(named: productsImages[indexPath.row])
+            
+            return cell
+        
+    }
     }
     
     
     
-    var productsImages:[String] = ["pcPic", "picturePC"]
-    var storesImages:[String] = ["newarkStore", "compeStore"]
 
+    
+    
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         searchQ.delegate = self
         scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
-
         // Do any additional setup after loading the view.
     }
     
@@ -83,9 +137,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 if let controllers = tb.viewControllers {
                     print("4 - got controllers reference")
                     print("4.5 - " + String(controllers.count))
-                    if controllers.count == 5 {
+                    if controllers.count == 3 {
                         print("5 - we have 5 controllers")
-                        if let resultVC = controllers[3] as? searchViewController {
+                        if let resultVC = controllers[1] as? searchViewController {
                             
                             
                             print("6 - got a reference to searchViewController")
@@ -99,7 +153,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                             resultVC.doAthing(searchQ)
                             
                             // switch to the 4th tab
-                            tb.selectedIndex = 3
+                            tb.selectedIndex = 1
 
                             print("7 - we should now be at searchViewController")
                             
@@ -124,9 +178,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             if let controllers = tb.viewControllers {
                 print("4 - got controllers reference")
                 print("4.5 - " + String(controllers.count))
-                if controllers.count == 5 {
+                if controllers.count == 3 {
                     print("5 - we have 5 controllers")
-                    if let resultVC = controllers[3] as? searchViewController {
+                    if let resultVC = controllers[1] as? searchViewController {
                         
                         
                         print("6 - got a reference to searchViewController")
@@ -140,7 +194,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                         resultVC.doAthingf(filter: "clothing")
                         
                         // switch to the 4th tab
-                        tb.selectedIndex = 3
+                        tb.selectedIndex = 1
 
                         print("7 - we should now be at searchViewController")
                         
@@ -167,9 +221,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             if let controllers = tb.viewControllers {
                 print("4 - got controllers reference")
                 print("4.5 - " + String(controllers.count))
-                if controllers.count == 5 {
+                if controllers.count == 3 {
                     print("5 - we have 5 controllers")
-                    if let resultVC = controllers[3] as? searchViewController {
+                    if let resultVC = controllers[1] as? searchViewController {
                         
                         
                         print("6 - got a reference to searchViewController")
@@ -183,7 +237,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                         resultVC.doAthingf(filter: "accessories")
                         
                         // switch to the 4th tab
-                        tb.selectedIndex = 3
+                        tb.selectedIndex = 1
 
                         print("7 - we should now be at searchViewController")
                         
@@ -208,9 +262,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             if let controllers = tb.viewControllers {
                 print("4 - got controllers reference")
                 print("4.5 - " + String(controllers.count))
-                if controllers.count == 5 {
+                if controllers.count == 3 {
                     print("5 - we have 5 controllers")
-                    if let resultVC = controllers[3] as? searchViewController {
+                    if let resultVC = controllers[1] as? searchViewController {
                         
                         
                         print("6 - got a reference to searchViewController")
@@ -224,7 +278,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                         resultVC.doAthingf(filter: "electronic")
                         
                         // switch to the 4th tab
-                        tb.selectedIndex = 3
+                        tb.selectedIndex = 1
 
                         print("7 - we should now be at searchViewController")
                         
@@ -249,9 +303,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             if let controllers = tb.viewControllers {
                 print("4 - got controllers reference")
                 print("4.5 - " + String(controllers.count))
-                if controllers.count == 5 {
+                if controllers.count == 3 {
                     print("5 - we have 5 controllers")
-                    if let resultVC = controllers[3] as? searchViewController {
+                    if let resultVC = controllers[1] as? searchViewController {
                         
                         
                         print("6 - got a reference to searchViewController")
@@ -265,7 +319,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                         resultVC.doAthingf(filter: "pharmacy")
                         
                         // switch to the 4th tab
-                        tb.selectedIndex = 3
+                        tb.selectedIndex = 1
 
                         print("7 - we should now be at searchViewController")
                         
@@ -290,9 +344,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             if let controllers = tb.viewControllers {
                 print("4 - got controllers reference")
                 print("4.5 - " + String(controllers.count))
-                if controllers.count == 5 {
+                if controllers.count == 3 {
                     print("5 - we have 5 controllers")
-                    if let resultVC = controllers[3] as? searchViewController {
+                    if let resultVC = controllers[1] as? searchViewController {
                         
                         
                         print("6 - got a reference to searchViewController")
@@ -306,7 +360,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                         resultVC.doAthingf(filter: "cars")
                         
                         // switch to the 4th tab
-                        tb.selectedIndex = 3
+                        tb.selectedIndex = 1
 
                         print("7 - we should now be at searchViewController")
                         
@@ -330,9 +384,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             if let controllers = tb.viewControllers {
                 print("4 - got controllers reference")
                 print("4.5 - " + String(controllers.count))
-                if controllers.count == 5 {
+                if controllers.count == 3 {
                     print("5 - we have 5 controllers")
-                    if let resultVC = controllers[3] as? searchViewController {
+                    if let resultVC = controllers[1] as? searchViewController {
                         
                         
                         print("6 - got a reference to searchViewController")
@@ -346,7 +400,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                         resultVC.doAthingf(filter: "clothing")
                         
                         // switch to the 4th tab
-                        tb.selectedIndex = 3
+                        tb.selectedIndex = 1
 
                         print("7 - we should now be at searchViewController")
                         
