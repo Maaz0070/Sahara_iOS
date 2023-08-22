@@ -1,6 +1,0 @@
-framework module BitcoinCore {
-  umbrella header "BitcoinCore.swift-umbrella.h"
-
-  export *
-  module * { export * }
-}

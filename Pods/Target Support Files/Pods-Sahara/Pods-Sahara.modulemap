@@ -1,6 +1,0 @@
-framework module Pods_Sahara {
-  umbrella header "Pods-Sahara-umbrella.h"
-
-  export *
-  module * { export * }
-}

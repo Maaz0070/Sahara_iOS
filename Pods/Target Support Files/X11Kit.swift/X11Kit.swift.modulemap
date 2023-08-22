@@ -1,6 +1,0 @@
-framework module X11Kit {
-  umbrella header "X11Kit.swift-umbrella.h"
-
-  export *
-  module * { export * }
-}

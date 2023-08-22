@@ -1,6 +1,0 @@
-framework module Hodler {
-  umbrella header "Hodler.swift-umbrella.h"
-
-  export *
-  module * { export * }
-}

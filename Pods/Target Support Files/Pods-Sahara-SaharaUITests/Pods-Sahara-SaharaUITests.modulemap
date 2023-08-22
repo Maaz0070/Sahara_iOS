@@ -1,6 +1,0 @@
-framework module Pods_Sahara_SaharaUITests {
-  umbrella header "Pods-Sahara-SaharaUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
