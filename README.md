@@ -28,31 +28,67 @@ Below is a snippet of the Swift code used to scrape data from local store websit
 
 ```swift
 func doAthing(_ searchBar: UISearchBar) {
-    // ... Loading indicator setup ...
+    // Set up an alert with a loading indicator
+    let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+    let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+    loadingIndicator.hidesWhenStopped = true
+    loadingIndicator.style = UIActivityIndicatorView.Style.medium
+    loadingIndicator.startAnimating()
+    alert.view.addSubview(loadingIndicator)
+    present(alert, animated: true, completion: nil)
 
-    let html = try String(contentsOf: URL(string: "https://www.locally.com/search/all/activities/depts?q=" + searchBar.text!)!)
-
-    // ... Extracting elements from the HTML ...
-
-    for title: Element in titles.array() {
-        // ... Extracting product details ...
-
-        // Fetch additional data from the product's individual page
-        let html1 = try String(contentsOf: url)
-        // ... Extracting distances, categories, descriptions, ratings, and more ...
-
-        // Fetch store details page
-        let html2 = try String(contentsOf: urls)
-        // ... Extracting store phone numbers ...
-
-        // Append extracted data to respective arrays
-        products.append(try! title.attr("data-product-name"))
-        // ... Append other data ...
+    // Construct the URL based on the search text
+    guard let searchText = searchBar.text, let url = URL(string: "https://www.locally.com/search/all/activities/depts?q=" + searchText) else {
+        return
     }
 
-    // Dismiss loading indicator
-    self.dismiss(animated: false, completion: nil)
+    do {
+        // Fetch the HTML content from the URL
+        let html = try String(contentsOf: url)
+        let doc = try SwiftSoup.parse(html)
+
+        // Extract elements from the HTML
+        guard let titles = try? doc.getElementsByClass("product-thumb "),
+              let prices = try? doc.getElementsByClass("product-thumb-price dl-price"),
+              let stores = try? doc.getElementsByClass("filter-label-link"),
+              let images = try? doc.getElementsByClass("product-thumb-img") else {
+            return
+        }
+
+        // Clear existing arrays before populating with new data
+        products = []
+        miles = []
+        dollars = []
+        names = []
+        images = []
+        stars = []
+
+        // Iterate through product elements and extract details
+        for title in titles.array() {
+            // ... Extract product details ...
+
+            // Check if product URL can be constructed from href
+            if let href = try? title.attr("href"), let productURL = URL(string: "https://www.locally.com/" + href) {
+                // Fetch additional data from the product's individual page
+                let html1 = try String(contentsOf: productURL)
+                // ... Extract distances, categories, descriptions, ratings, and more ...
+
+                // Append extracted data to respective arrays
+                products.append(productName)
+                miles.append(distance)
+                // ... Append other data ...
+            }
+        }
+
+        // Dismiss the loading indicator
+        alert.dismiss(animated: true, completion: nil)
+    } catch {
+        // Handle errors here
+        print("Error: \(error)")
+        alert.dismiss(animated: true, completion: nil)
+    }
 }
+
 ```
 
 #Installation
