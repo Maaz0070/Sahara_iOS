@@ -50,3 +50,15 @@ func doAthing(_ searchBar: UISearchBar) {
     // Dismiss loading indicator
     self.dismiss(animated: false, completion: nil)
 }
+```
+
+#Installation
+1. Clone this repository to your local machine.
+   `git clone https://github.com/Maaz0070/Sahara_iOS.git`
+2. Open the project in Xcode.
+3. Build and run the app on your simulator or device
+
+#Feedback and Contributions
+We're excited to bring you Sahara and we welcome your feedback and contributions. If you encounter any issues or have suggestions for improvements, please don't hesitate to open an issue on our GitHub repository.
+
+Happy local shopping! 🛍️
