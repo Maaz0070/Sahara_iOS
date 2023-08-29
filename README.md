@@ -2,6 +2,9 @@
 
 Welcome to **Sahara**, the iOS application designed to empower users to explore products available in their local mom and pop stores, offering a refreshing alternative to mainstream retail chains. By leveraging the SwiftSoup library, the app scours local websites to extract product information, ensuring you have access to unique, community-based offerings.
 
+![Search Screen](sahara.png)
+
+
 ## Features
 
 ### Home Page
